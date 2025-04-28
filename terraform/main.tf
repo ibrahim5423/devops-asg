@@ -76,7 +76,7 @@ resource "aws_instance" "web_server" {
   ami                    = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI (us-east-1)
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
-  key_name               = "E2E-IaC"
+  key_name               = "devops-asg"
   vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]
 
   user_data = <<-EOF
